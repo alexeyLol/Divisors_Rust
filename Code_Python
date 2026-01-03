@@ -1,0 +1,34 @@
+from math import sqrt
+
+def mults2(x: int, j: int, c: int) -> int:
+    if x % j == 0: return mults2(x // j, j, c + 1)
+    else:
+        print(f" ^{c}", end="")
+        return x
+
+def mults(x: int, j: int):
+    q = sqrt(x)
+    
+    for i in range(j, x+1):
+        if x % i == 0:
+            print(f"\n{i}", end="")
+
+            mults(mults2(x // i, i, 1), i)
+            break
+
+        if i >= q:
+            print(f"\n{x} ^1", end="")
+            break
+
+def main():
+    n = int(input("This program returns multipliers of a number.\nEnter the number: "))
+
+    print("----------", end="")
+
+    if n in [0, 1, 2]: print(f"\n{n} ^1\n----------\nFinished")
+    else:
+        mults(n, 2)
+        print("\n----------\nFinished")
+
+if __name__ == "__main__":
+    main()
