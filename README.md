@@ -2,6 +2,7 @@
 Very FAST code for finding the multipliers of a number (Rust, C++, Python)
 
 MANUAL
+
 I recommend using the code in Rust or C++ (because Python is too slow).
 
 The first step: enter number (for C++ and Rust: 0 <= number < 2^64)
