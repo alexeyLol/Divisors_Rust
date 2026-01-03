@@ -20,7 +20,7 @@ OUTPUT FORMAT
 #  ----------                                       # ----------
 #  Finished
 
-All multipliers are PRIME NUMBERS(2, 3, 5, 3607, 3803)
+All multipliers are PRIME NUMBERS (2, 3, 5, 3607, 3803)
 
 3 ^2    # Here '3' is a prime multiplier, '^2' is the DEGREE (3^2 <=> 3 * 3)
 Indeed, 2 * 3 * 3 * 5 * 3607 * 3803 = 1234567890
