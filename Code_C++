@@ -1,0 +1,69 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+unsigned long long mults2(unsigned long long x, unsigned long long j, int c)
+{
+    if (x % j == 0)
+    {
+        return mults2(x / j, j, c + 1);
+    }
+    else
+    {
+        cout << " ^" << c;
+        return x;
+    }
+}
+
+int mults(unsigned long long x, unsigned long long j)
+{
+    unsigned long long q = sqrt(x);
+    for (unsigned long long i = j; i <= x; i++)
+    {
+        if (x % i == 0)
+        {
+            cout << endl
+                 << i;
+            mults(mults2(x / i, i, 1), i);
+            break;
+        }
+
+        if (i >= q)
+        {
+            cout << endl
+                 << x << " ^1";
+            break;
+        }
+    }
+    return 0;
+}
+
+int main()
+{
+    unsigned long long n;
+
+    cout << "This program returns multipliers of a number." << endl
+         << "Enter the number: ";
+    cin >> n;
+    cout << "----------";
+
+    if (n == 0 || n == 1 || n == 2)
+    {
+        cout << endl
+             << n
+             << " ^1"
+             << endl
+             << "----------"
+             << endl
+             << "Finished";
+        return 0;
+    }
+
+    mults(n, 2);
+    cout << endl
+         << "----------"
+         << endl
+         << "Finished";
+    return 0;
+}
