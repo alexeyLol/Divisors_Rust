@@ -1,49 +1,62 @@
 use std::io;
+use std::time::Instant;
 
-fn mults2(x:u64, j: u64, c: u32) -> u64 {
-    if x % j == 0 {
-        return mults2(x / j, j, c + 1);
-    } else {
-        print!(" ^{}", c);
-        return x;
-    }
+fn get_degree(num: &mut u128, divisor: u128, degree: u16) {
+    if *num % divisor == 0 {
+        *num /= divisor;
+        get_degree(num, divisor, degree + 1);
+    } else { println!(" ^{degree}"); }
 }
 
-fn mults(x: u64, j: u64) -> () {
-    let q: u64 = x.isqrt();
-    for i in j..=x {
-        if x % i == 0 {
-            print!("\n{}", i);
-            
-            mults(mults2(x / i, i, 1), i);
-            break;
-        }
-        
-        if i >= q {
-            print!("\n{} ^1", x);
-            break;
-        }
+fn get_divisors(num: &mut u128) {
+    if *num % 2 == 0 {
+        *num /= 2;
+        print!("2");
+        get_degree(num, 2, 1);
     }
+    if *num % 3 == 0 {
+        *num /= 3;
+        print!("3");
+        get_degree(num, 3, 1);
+    }
+    
+    let mut divisor = 5;
+    while divisor * divisor < *num + 1 {
+        if *num % divisor == 0 {
+            *num /= divisor;
+            print!("{divisor}");
+            get_degree(num, divisor, 1);
+        }
+        if *num % (divisor + 2) == 0 {
+            *num /= divisor + 2;
+            print!("{}", divisor + 2);
+            get_degree(num, divisor, 1);
+        }
+        divisor += 6;
+    }
+    if *num != 1 { println!("{num} ^1"); }
 }
 
-pub fn main() {
-    println!("This program returns multipliers of a number.\nEnter the number:");
+fn main() {
+    println!("This program returns divisors of a number.\nEnter the number:");
     
-    let mut input_n = String::new();
+    let mut num = String::new();
+    io::stdin().read_line(&mut num)
+        .expect("Error while reading");
     
-    io::stdin().read_line(&mut input_n)
-        .expect("Error while reading number");
-    
-    let n: u64 = input_n.trim()
+    let mut num: u128 = num.trim()
         .parse()
-        .expect("Please, enter number!");
+        .expect("Please, enter an unsigned number!");
     
-    print!("----------");
+    println!("----------");
     
-    if n == 0 || n == 1 || n == 2 {
-        println!("\n{} ^1\n----------\nFinished",n);
+    let now = Instant::now();
+    if num < 2 {
+        println!("{num}");
+    } else if num < 4 {
+        println!("{num} ^1");
     } else {
-        mults(n, 2);
-        println!("\n----------\nFinished")
+        get_divisors(&mut num);
     }
+    println!("----------\nFinished: {:?}", now.elapsed());
 }
