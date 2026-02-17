@@ -3,7 +3,7 @@ Very FAST code for finding the divisors of a number (Rust)
 
 ### MANUAL
 The first step: enter your number.  
-The second step: program will print all divisors.  
+The second step: the program will print all divisors.  
 
 ### INPUT FORMAT
 (0 <= your number < 2<sup>128</sup>)&nbsp;&nbsp;&nbsp;&nbsp;# u128
