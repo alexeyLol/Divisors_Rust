@@ -12,15 +12,15 @@ The second step: the program will print all divisors.
 ```bash
    This program returns divisors of a number.
    Enter the number:
-   1234567890                                       # YOUR NUMBER
+   1234567890            # YOUR NUMBER
    ----------
-   2 ^1                                             # Divisor
-   3 ^2                                             # Divisor
-   5 ^1                                             # Divisor
-   3607 ^1                                          # Divisor
-   3803 ^1                                          # Divisor
+   2 ^1                  # Divisor
+   3 ^2                  # Divisor
+   5 ^1                  # Divisor
+   3607 ^1               # Divisor
+   3803 ^1               # Divisor
    ----------
-   Finished: 118.353µs                              # Execution time
+   Finished: 118.353µs   # Execution time
 ```
 All divisors are PRIME NUMBERS (2, 3, 5, 3607, 3803)
 
