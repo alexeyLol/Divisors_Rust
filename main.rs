@@ -8,7 +8,11 @@ fn get_degree(num: &mut u128, divisor: u128, degree: u16) {
     } else { println!(" ^{degree}"); }
 }
 
-fn get_divisors(num: &mut u128) {
+pub fn get_divisors(num: &mut u128) {
+    if *num < 4 {
+        println!("{num} ^1");
+        return;
+    }
     if *num % 2 == 0 {
         *num /= 2;
         print!("2");
@@ -30,11 +34,11 @@ fn get_divisors(num: &mut u128) {
         if *num % (divisor + 2) == 0 {
             *num /= divisor + 2;
             print!("{}", divisor + 2);
-            get_degree(num, divisor, 1);
+            get_degree(num, divisor + 2, 1);
         }
         divisor += 6;
     }
-    if *num != 1 { println!("{num} ^1"); }
+    println!("{num} ^1");
 }
 
 fn main() {
@@ -49,14 +53,8 @@ fn main() {
         .expect("Please, enter an unsigned number!");
     
     println!("----------");
-    
+
     let now = Instant::now();
-    if num < 2 {
-        println!("{num}");
-    } else if num < 4 {
-        println!("{num} ^1");
-    } else {
-        get_divisors(&mut num);
-    }
+    get_divisors(&mut num);
     println!("----------\nFinished: {:?}", now.elapsed());
 }
