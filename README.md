@@ -1,27 +1,28 @@
-# Multipliers_VERY_FAST
-Very FAST code for finding the multipliers of a number (Rust, C++, Python)
+# Divisors_Rust
+Very FAST code for finding the divisors of a number (Rust)
 
-MANUAL
+### MANUAL
+The first step: enter your number.  
+The second step: program will print all divisors.  
 
-I recommend using the code in Rust or C++ (because Python is too slow).
+### INPUT FORMAT
+0 <= your number < 2^128&nbsp;&nbsp;&nbsp;&nbsp;# u128
 
-The first step: enter number (for C++ and Rust: 0 <= number < 2^64)
-The second step: program will print all multipliers
+### OUTPUT FORMAT
+```bash
+   This program returns divisors of a number.
+   Enter the number:
+   1234567890                                       # YOUR NUMBER
+   ----------
+   2 ^1                                             # Divisor
+   3 ^2                                             # Divisor
+   5 ^1                                             # Divisor
+   3607 ^1                                          # Divisor
+   3803 ^1                                          # Divisor
+   ----------
+   Finished: 118.353µs                              # Execution time
+```
+All divisors are PRIME NUMBERS (2, 3, 5, 3607, 3803)
 
-OUTPUT FORMAT
-
-#  This program returns multipliers of a number.
-#  Enter the number: 1234567890                     # YOUR NUMBER
-#  ----------
-#  2 ^1                                             # Multiplier 1
-#  3 ^2                                             # Multiplier 2
-#  5 ^1                                             # Multiplier 3
-#  3607 ^1                                          # Multiplier 4
-#  3803 ^1                                          # Multiplier 5
-#  ----------
-#  Finished
-
-All multipliers are PRIME NUMBERS (2, 3, 5, 3607, 3803)
-
-3 ^2    # Here '3' is a prime multiplier, '^2' is the DEGREE (3^2 <=> 3 * 3)
+`3 ^2` # Here `3` is a <ins>prime divisor</ins>, `^2` is a <ins>power</ins> (3^2 = 3 * 3).  
 Indeed, 2 * 3 * 3 * 5 * 3607 * 3803 = 1234567890
