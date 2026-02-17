@@ -6,7 +6,7 @@ The first step: enter your number.
 The second step: program will print all divisors.  
 
 ### INPUT FORMAT
-(0 <= your number < 2^128)&nbsp;&nbsp;&nbsp;&nbsp;# u128
+(0 <= your number < 2<sup>128</sup>)&nbsp;&nbsp;&nbsp;&nbsp;# u128
 
 ### OUTPUT FORMAT
 ```bash
@@ -24,5 +24,5 @@ The second step: program will print all divisors.
 ```
 All divisors are PRIME NUMBERS (2, 3, 5, 3607, 3803)
 
-`3 ^2` # Here `3` is a <ins>prime divisor</ins>, `^2` is a <ins>power</ins> (3^2 = 3 * 3).  
+`3 ^2` # Here `3` is a <ins>prime divisor</ins>, `^2` is a <ins>power</ins> (3<sup>2</sup> = 3 * 3).  
 Indeed, 2 * 3 * 3 * 5 * 3607 * 3803 = 1234567890
