@@ -6,7 +6,7 @@ The first step: enter your number.
 The second step: program will print all divisors.  
 
 ### INPUT FORMAT
-0 <= your number < 2^128&nbsp;&nbsp;&nbsp;&nbsp;# u128
+(0 <= your number < 2^128)&nbsp;&nbsp;&nbsp;&nbsp;# u128
 
 ### OUTPUT FORMAT
 ```bash
