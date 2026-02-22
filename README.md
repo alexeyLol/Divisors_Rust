@@ -1,5 +1,5 @@
 # Divisors_Rust
-Very FAST code for finding the divisors of a number (Rust)
+Very FAST code for finding divisors of a number (Rust)
 
 ### MANUAL
 The first step: enter your number.  
