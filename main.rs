@@ -24,7 +24,7 @@ pub fn get_divisors(num: &mut u128) {
         get_degree(num, 3, 1);
     }
     
-    let mut divisor = 5;
+    let mut divisor: u128 = 5;
     while divisor * divisor < *num + 1 {
         if *num % divisor == 0 {
             *num /= divisor;
