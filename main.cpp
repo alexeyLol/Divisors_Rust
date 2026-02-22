@@ -6,7 +6,7 @@ using namespace std;
 unsigned long long get_degree(unsigned long long num , unsigned long long divisor, int degree) {
     if (num % divisor == 0) {
         num /= divisor;
-        get_degree(num, divisor, degree + 1);
+        num = get_degree(num, divisor, degree + 1);
     } else {
         cout << " ^" << degree << endl;
     }
