@@ -5,7 +5,7 @@ Very FAST code for finding divisors of a number (Rust, C++, Python)
 The first step: enter your number.  
 The second step: the program will print all divisors.  
 
-### INPUT FORMAT
+### CONSTRAINTS
 (0 <= your number < 2<sup>128</sup>)
 
 ### OUTPUT FORMAT
