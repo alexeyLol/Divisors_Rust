@@ -6,9 +6,11 @@ The first step: enter your number.
 The second step: the program will print all divisors.  
 
 ### CONSTRAINTS
-Rust&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| `0 <= your number < 2^128`  
-C++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| `0 <= your number < 2^64`   
-Python&nbsp;| `Any number you want (int)`  
+| Language | Constrains |
+| --- | --- |
+| Rust | `0 <= your number < 2^128` |
+| C++ | `0 <= your number < 2^64` |
+| Python | `Any number you want (int)` |
 
 ### OUTPUT FORMAT
 ```bash
