@@ -8,9 +8,9 @@ The second step: the program will print all divisors.
 ### CONSTRAINTS
 | Language | Constraints |
 | --- | --- |
-| Rust | `0 <= your number < 2^128` |
-| C++ | `0 <= your number < 2^64` |
-| Python | `Any number you want (int)` |
+| Rust | 0 <= your number < 2<sup>128</sup> |
+| C++ | 0 <= your number < 2<sup>64</sup> |
+| Python | Any number you want (int) |
 
 ### OUTPUT FORMAT
 ```bash
