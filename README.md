@@ -42,3 +42,5 @@ xaxis - values 0 to 1 000 000 (includes 0 because my program returns 0 here)
 yaxis - time duration, ns (nanoseconds)
 
 The measurements based on the algorithm in the **Rust** language
+
+You can take a closer look in the [scatter.html](scatter.html).
